@@ -1,0 +1,1 @@
+# FastAPI backend for PDF Accessibility Tool

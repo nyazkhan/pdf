@@ -1,0 +1,43 @@
+accessibility:
+  wcag_level: "AA"  # A, AA, or AAA
+  auto_fix: 
+    - missing_alt_text
+    - empty_headings
+  
+ai_models:
+  vision_model: "Salesforce/blip-image-captioning-base"
+  device: "cpu"  # Change to "cuda" if GPU available
+  
+  # Gemini AI settings
+  use_gemini: true
+  gemini_model: "gemini-2.0-flash-exp"  # Cost-effective model for production
+  # API key should be set via GEMINI_API_KEY environment variable (in .env file)
+  ai_mode: "hybrid"  # "blip", "gemini", or "hybrid"
+  
+pdf_processing:
+  max_pages: 500
+  ocr_enabled: true
+  batch_size: 10
+  
+  # veraPDF integration
+  enable_verapdf: true
+  verapdf_path: null  # Auto-detect or specify path
+
+reporting:
+  # Output formats to generate
+  export_formats: 
+    - "json"
+    - "html"
+  
+  # HTML report settings
+  html_report:
+    include_charts: true
+    include_ai_summary: true
+    include_verapdf_results: true
+
+gui:
+  theme: "default"
+  highlight_colors:
+    critical: "#FF4444"
+    warning: "#FFA500"
+    info: "#4169E1"

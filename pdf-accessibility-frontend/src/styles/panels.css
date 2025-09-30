@@ -1,0 +1,55 @@
+/* React Resizable Panels Styles */
+.panel-group {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.panel {
+  overflow: hidden;
+  position: relative;
+}
+
+.panel-resize-handle {
+  flex: 0 0 auto;
+  position: relative;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.panel-resize-handle:hover {
+  background-color: #1976d2 !important;
+}
+
+.panel-resize-handle:active {
+  background-color: #1565c0 !important;
+}
+
+.panel-resize-handle-horizontal {
+  cursor: col-resize;
+  width: 4px;
+}
+
+.panel-resize-handle-vertical {
+  cursor: row-resize;
+  height: 4px;
+}
+
+/* Custom scrollbar styles for panels */
+.panel::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.panel::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
